@@ -1,0 +1,386 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+li{
+  list-style: none;
+}
+
+.nav {
+  display: flex;
+  list-style: none;
+}
+
+.nav>li>a {
+  margin-left: 40px;
+  color: black;
+  transition: 0.2 ease-in-out;
+  text-decoration: none;
+}
+
+.nav>li>a:hover {
+  cursor: pointer;
+  color: #51534d;
+  transition: 0.2s ease-in-out;
+  text-decoration: none;
+}
+
+header {
+  color: #000;
+  position: fixed;
+  width: 90vw;
+  left: 50%;
+  transform: translateX(-50%);
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 600px;
+  gap: 10%;
+  z-index: 2;
+  top: 30px;
+}
+
+.logo {
+  width: 250px;
+}
+
+section  {
+  background: url('../../imgs/fundo.jpg') center center / cover no-repeat;
+  color: #000;
+  height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+section .list {
+  width: 70vw;
+  height: 100%;
+  margin: auto;
+  position: relative;
+}
+
+section .list .item {
+  position: absolute;
+  inset: 0;
+}
+
+section .list .item .car-img {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50%;
+}
+
+section .list .item .car-img img {
+  width: 100%;
+  transform: rotate(-30deg);
+}
+
+section .list .item .car-img::before {
+  content: '';
+  position: absolute;
+  background-color: #000;
+  width: 100%;
+  height: 100px;
+  top: 70%;
+  left: 50px;
+  border-radius: 50%;
+  filter: blur(50px);
+}
+
+section .list .item .content {
+  position: absolute;
+  right: 100px;
+  width: 70%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: end;
+  gap: 20px;
+}
+
+section .list .item .content .car-information {
+  font-weight: bold;
+}
+
+section .list .item .content h2 {
+  font-size: 8em;
+  line-height: 1em;
+  font-family: 'League Gothic', sans-serif;
+}
+
+section .list .item .content .description {
+  color: #000;
+  font-size: 14px;
+  text-align: right;
+  max-width: 600px;
+}
+
+section .list .item .content .information {
+  border-radius: 30px;
+  height: 35px;
+  width: 120px;
+  text-transform: uppercase;
+  border: 2px solid #f7f7f7;
+  background-color: #000;
+  color: #ffffff;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.social-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-buttons a {
+  text-decoration: none;
+}
+
+.whatsapp-btn {
+  position: relative; 
+  z-index: 9999; 
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background-color: #25d366;
+  color: white;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.whatsapp-btn:hover {
+  background-color: #1ebc5e;
+  transform: scale(1.05);
+}
+
+.whatsapp-btn i {
+  font-size: 18px;
+}
+
+section .list::before {
+  content: '';
+  position: absolute;
+  height: 200px;
+  width: 100%;
+  top: 50%;
+  border-top: 1px solid #000;
+}
+
+section .indicators {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 200px;
+  width: 90vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  gap: 15px;
+}
+
+section .indicators .number {
+  font-size: 5em;
+  font-family: 'League Gothic', sans-serif;
+}
+
+section .indicators ul {
+  display: flex;
+  gap: 10px;
+}
+
+section .indicators ul li {
+  width: 50px;
+  height: 5px;
+  background-color: #030303;
+  border-radius: 5px;
+  transition: 0.5s;
+}
+
+section .indicators ul .active {
+  background-color: #71747d;
+}
+
+section .arrows {
+  width: 70vw;
+  position: absolute;
+  z-index: 5;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -25px);
+  display: flex;
+  justify-content: space-between;
+}
+
+section .arrows button {
+  top: 60%;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+}
+
+section .arrows button img {
+  width: 30px;
+  margin-top: 4px;
+  cursor: pointer;
+}
+
+section .arrows button:hover {
+  background-color: #51534d;
+}
+
+section .arrows button:nth-child(1) img {
+  transform: scaleX(-1);
+}
+
+section .list {
+  --calculation: 1;
+  z-index: 1;
+}
+
+section .list .item {
+  transform: translateX(calc(var(--calculation) * 100%));
+  transition: 0.5s;
+  opacity: 0;
+}
+
+section .list .item .car-img img {
+  transform: rotate(0);
+  transition: 0.5s;
+  transition-delay: 0.3s;
+}
+
+section .list .item .content .car-information,
+section .list .item .content h2,
+section .list .item .content .description,
+section .list .item .content .information {
+  transform: translateX(calc(200px * var(--calculation)));
+  transition: 0.7s;
+  transition-delay: 0.3s;
+  opacity: 0;
+}
+
+section .list .item .content h2 {
+  transition-delay: 0.5s;
+}
+
+section .list .item .content .description {
+  transition-delay: 0.7s;
+}
+
+section .list .item .content .information {
+  transition-delay: 0.9s;
+}
+
+section .list .active {
+  transform: translateX(0);
+  transition: 0.5s;
+  opacity: 1;
+}
+
+section .list .active .car-img img {
+  transform: rotate(-20deg);
+}
+
+section .list .active .content .car-information,
+section .list .active .content h2,
+section .list .active .content .description,
+section .list .active .content .information {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+@media (max-width: 1024px) {
+  header {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    top: 20px;
+  }
+
+  header nav ul {
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+  }
+
+  section .list .item .content {
+    right: 50px;
+    width: 90%;
+    align-items: center;
+    text-align: center;
+  }
+
+  section .list .item .content h2 {
+    font-size: 4em;
+  }
+
+  section .list .item .content .description {
+    text-align: center;
+  }
+
+  section .arrows {
+    width: 90vw;
+  }
+
+  section .indicators .number {
+    font-size: 3em;
+  }
+}
+
+@media (max-width: 768px) {
+  header .logo {
+    width: 180px;
+  }
+
+  header nav ul {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  section .list .item .car-img {
+    width: 100%;
+    position: static;
+    transform: none;
+  }
+
+  section .list .item .car-img img {
+    transform: rotate(0deg);
+    margin-top: 20px;
+  }
+
+  section .list .item .content {
+    right: 0;
+    align-items: center;
+  }
+
+  section .list .item .content h2 {
+    font-size: 3em;
+  }
+
+  section .arrows {
+    top: auto;
+    bottom: 30px;
+  }
+}
+
+button:hover,
+.whatsapp-button:hover {
+  transform: scale(1.05);
+  transition: 0.3s ease-in-out;
+}
+
+button:focus,
+a:focus {
+  outline: 2px dashed #000;
+  outline-offset: 4px;
+}
