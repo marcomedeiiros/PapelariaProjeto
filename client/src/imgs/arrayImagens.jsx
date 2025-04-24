@@ -4,6 +4,9 @@ import fundo from "./fundo.jpg"
 import contratos from "./contratos.png"
 import impressao from "./impressao.png"
 import panfletos from "./panfletos.png"
+import telefone from "./telefone.png"
+import mapper from "./mapper.png"
+import informacao from "./informacao.png"
 
 
 const imgs = {
@@ -12,7 +15,10 @@ const imgs = {
  fundo,
  contratos,
  impressao,
- panfletos
+ panfletos,
+ telefone,
+ mapper,
+ informacao
   
 };
 
