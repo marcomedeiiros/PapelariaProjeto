@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-
 li {
   list-style: none;
 }
@@ -301,78 +300,6 @@ section .list .active .content .information {
   opacity: 1;
 }
 
-@media (max-width: 1024px) {
-  header {
-    grid-template-columns: 1fr;
-    gap: 20px;
-    top: 20px;
-  }
-
-  header nav ul {
-    grid-template-columns: repeat(3, 1fr);
-    justify-items: center;
-  }
-
-  section .list .item .content {
-    right: 50px;
-    width: 90%;
-    align-items: center;
-    text-align: center;
-  }
-
-  section .list .item .content h2 {
-    font-size: 4em;
-  }
-
-  section .list .item .content .description {
-    text-align: center;
-  }
-
-  section .arrows {
-    width: 90vw;
-  }
-
-  section .indicators .number {
-    font-size: 3em;
-  }
-}
-
-@media (max-width: 768px) {
-  header .logo {
-    width: 180px;
-  }
-
-  header nav ul {
-    grid-template-columns: 1fr;
-    gap: 10px;
-  }
-
-  section .list .item .car-img {
-    width: 100%;
-    position: static;
-    transform: none;
-  }
-
-  section .list .item .car-img img {
-    transform: rotate(0deg);
-    margin-top: 20px;
-  }
-
-  section .list .item .content {
-    right: 0;
-    align-items: center;
-  }
-
-  section .list .item .content h2 {
-    font-size: 3em;
-  }
-
-  section .arrows {
-    top: auto;
-    bottom: 30px;
-  }
-}
-
 button:hover,
 .whatsapp-button:hover {
   transform: scale(1.05);
@@ -454,19 +381,6 @@ a:focus {
   color: #999;
 }
 
-.btn-adquirir {
-  margin-top: 15px;
-  padding: 10px 20px;
-  background-color: #000;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
-}
-
 .Agendamentos {
   display: flex;
   justify-content: center;
@@ -508,4 +422,111 @@ a:focus {
 .map-container iframe {
   border-radius: 50px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 1);
+}
+
+@media screen and (max-width: 1020px) {
+  .nav {
+    display: none;
+  }
+
+  header {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    top: 20px;
+    padding: 10px;
+  }
+
+  header .logo {
+    width: 180px;
+  }
+
+  header nav ul {
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    gap: 10px;
+  }
+
+  section .list .item .car-img {
+    width: 100%;
+    top: 0;
+    left: 0;
+    transform: translateY(0);
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+  }
+
+  section .list .item .car-img img {
+    transform: rotate(0deg);
+    margin-top: 40px;
+  }
+
+  section .list .item .content {
+    right: 0;
+    width: 90%;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+  }
+
+  section .list .item .content h2 {
+    font-size: 2.5em;
+    word-break: break-word;
+  }
+
+  section .list .item .content .description {
+    font-size: 1em;
+  }
+
+  section .arrows {
+    width: 90vw;
+  }
+
+  .course-section {
+    height: auto;
+    margin-top: -260px;
+  }
+
+  .course-cards {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .course-card {
+    margin: 10px auto;
+  }
+
+  .indicators,
+  .number {
+    display: none;
+  }
+
+  .indicators .indicator-list {
+    display: none;
+  }
+
+  .Agendamentos {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .text-agendar {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .map-container {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  .map-container iframe {
+    width: 90%;
+    height: 300px;
+    border-radius: 50px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 1);
+  }
 }
