@@ -71,16 +71,7 @@ export default function PapelariaSlider() {
                     <button onClick={next} className="arrow-button">
                         <img src={imgs.arrow} alt="seta-direita" className="arrow-icon" />
                     </button>
-                </div>
-
-                <div className="indicators">
-                    <div className="number">{(active + 1).toString().padStart(2, '0')}</div>
-                    <ul className="indicator-list">
-                        {infos.map((_, index) => (
-                            <li key={index} className={`indicator-dot ${index === active ? 'active' : ''}`}></li>
-                        ))}
-                    </ul>
-                </div>
+                </div>                
                 <div className="course-section">
                     <h2 className="section-header" id="funciona">Como <span>Funciona</span></h2>
                     <div className="course-cards">
@@ -109,12 +100,12 @@ export default function PapelariaSlider() {
                         <h1 id='loca'>Nossa <span>Localização.</span></h1>
                         <p>Na nossa papelaria home office, sua experiência vai além de uma simples impressão. Oferecemos praticidade, preços justos e um atendimento feito para facilitar sua rotina. Trabalhamos com documentos importantes, contratos e materiais diversos, sempre com qualidade e agilidade. Tudo isso sem precisar sair de casa entre em contato e descubra como podemos te ajudar de forma rápida e eficiente!</p>
 
-                        <p><strong>Endereço:</strong> Av. Amaral Peixoto, Espirito Santo, Barramares N°5</p>
+                        <p><strong>Endereço:</strong> Av. pintamanhamgaba, lá aonde o vento fez a curva N°200</p>
                     </div>
 
                     <div className="map-container">
                         <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d934.6690496074469!2d-40.34203773036797!3d-20.43740199881674!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xb840653ab2dd9b%3A0x3d40424516de03c5!2sAv.%20Amaral%20Peixoto%2C%20894%20-%20Barramares%2C%20Vila%20Velha%20-%20ES%2C%2029124-381!5e0!3m2!1spt-BR!2sbr!4v1745520594919!5m2!1spt-BR!2sbr"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3741.7081000137036!2d-40.29062452392678!3d-20.312345981163723!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xb817cf17865ee1%3A0x39dd8e608645944!2sSHOPPING%20VIT%C3%93RIA!5e0!3m2!1spt-BR!2sbr!4v1745704159523!5m2!1spt-BR!2sbr"
                             width="auto"
                             height="350"
                             style={{ borderRadius: '50px' }}
